@@ -13,8 +13,9 @@ class Connection
     private $password;
     private $db;
     public $connection;
+    public $query;
 
-    public function __construct($host = 'localhost:3306', $user_name = 'root', $password = '', $db = 'root')
+    public function __construct(string $host = 'localhost:3306', string $user_name = 'root', string $password = '', string $db = 'root')
     {
         $this->host      = $host;
         $this->user_name = $user_name;
@@ -22,8 +23,7 @@ class Connection
         $this->db        = $db;
     }
 
-
-    public function getConnect()
+    public function getConnect(): object
     {
         $this->connection = mysqli_connect($this->host, $this->user_name, $this->password, $this->db);
         if (!$this->connection)
@@ -32,4 +32,6 @@ class Connection
         }
         return $this->connection;
     }
+
+
 }

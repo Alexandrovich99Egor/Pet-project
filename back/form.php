@@ -1,5 +1,7 @@
 <div class="flex flex-col items-center justify-center h-svh ">
-    <h1 class="text-red-700 text-2xl font-extrabold text-center m-14">Welcome</h1>
+    <?php function form_register(): string
+    {
+        return ' <h1 class="text-red-700 text-2xl font-extrabold text-center m-14">Welcome</h1>
     <form class="bg-gradient-to-r
          from-purple-500
           to-pink-500 
@@ -10,13 +12,17 @@
          justify-center border-4
          border-orange-800 
             min-w-80
-            hover:bg-gradient-to-r" action="/back/register.php" method="POST">
+            hover:bg-gradient-to-r" action="./back/register.php" method="POST">
         <input name="name" type="text" placeholder=" Кто ты воин?"
             class="active:bg-violet-700 focus:outline-none p-2 rounded-md">
         <input name="second_name" type="text" placeholder=" Откуда ты?" class="focus:outline-none p-2 rounded-md">
-        <input value="submit" name="submit" type="submit" placeholder="Отправить"
+        <input name="submit" type="submit" placeholder="Отправить"
             class="focus:outline-none text-white border-2 p-2 rounded-md hover:bg-red-700 hover:ease-in">
-    </form>
+    </form>';
+    }
+    echo form_register();
+    ?>
+
 </div>
 
 <?php
