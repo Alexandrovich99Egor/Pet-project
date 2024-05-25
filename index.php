@@ -1,0 +1,1 @@
+<?php require_once ('./back/home.php');
